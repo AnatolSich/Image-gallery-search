@@ -1,0 +1,19 @@
+{
+  "pictures": [
+    {
+      "id": "fe1123d264a09f072b77",
+      "cropped_picture": "http://interview.agileengine.com/pictures/cropped/011129columbus1-01.jpg"
+    },
+    {
+      "id": "65dc68d0e11c8005eba5",
+      "cropped_picture": "http://interview.agileengine.com/pictures/cropped/018086b.jpg"
+    },
+    {
+      "id": "be1bcbd856c1d6767c6c",
+      "cropped_picture": "http://interview.agileengine.com/pictures/cropped/01sc087.jpg"
+    }
+  ],
+  "page": 3,
+  "pageCount": 87,
+  "hasMore": true
+}

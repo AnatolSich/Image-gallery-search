@@ -1,0 +1,65 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.springframework.boot' version '2.1.9.RELEASE'
+}
+
+group 'com.agile.engine'
+version '1.0-SNAPSHOT'
+
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    jcenter()
+}
+
+ext {
+    junit5Version = '5.5.2'
+    springBootStarterVersion = '2.1.8.RELEASE'
+    springVersion = '5.2.0.RELEASE'
+    jacksonVersion = '2.11.0'
+}
+
+dependencies {
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: junit5Version
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: junit5Version
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: springBootStarterVersion
+    testCompile group: 'org.springframework.security', name: 'spring-security-test', version: springVersion
+
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: springBootStarterVersion
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: springBootStarterVersion
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: springBootStarterVersion
+    compile group: 'org.springframework.security', name: 'spring-security-taglibs', version: springVersion
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: springBootStarterVersion
+    compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: springBootStarterVersion
+
+    compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1'
+    compile group: 'javax.servlet', name: 'jstl', version: '1.2'
+    compile 'org.apache.httpcomponents:httpclient:4.5.10'
+
+    compile group: 'org.postgresql', name: 'postgresql', version: '42.2.5'
+
+    compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '9.0.36'
+
+    compile group: 'net.logstash.logback', name: 'logstash-logback-encoder', version: '4.11'
+
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: jacksonVersion
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: jacksonVersion
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: jacksonVersion
+
+    compileOnly 'org.projectlombok:lombok:1.18.10'
+    annotationProcessor 'org.projectlombok:lombok:1.18.10'
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    mainClassName = 'com.agile.engine.ImageGallerySearch'
+}
